@@ -1,139 +1,247 @@
-Amazon India Sales Analytics Dashboard
+# Amazon India Sales Analytics Dashboard
 
-Project Overview
+## Project Overview
 
-This project analyzes Amazon India sales data from 2015–2025 to identify sales trends, customer behavior, product performance, and operational insights.
+This project analyzes Amazon India sales data from 2015–2025 to uncover revenue trends, customer behavior, product performance, festival sales impact, and operational insights.
 
-The project includes:
+The project demonstrates an end-to-end Data Analytics workflow including:
 
-Data Cleaning & Transformation
-Exploratory Data Analysis (EDA)
-SQL Database Integration
-Interactive Streamlit Dashboard
-Business Insights & Recommendations
-Tech Stack
-Programming
-Python
-Pandas
-NumPy
-Visualization
-Matplotlib
-Seaborn
-Plotly
-Streamlit
-Database
-SQLite
-SQLAlchemy
-Project Structure
+* Data Cleaning & Transformation
+* Exploratory Data Analysis (EDA)
+* SQL Database Preparation
+* Interactive Streamlit Dashboard Development
+* Business Insights & Recommendations
+
+---
+
+## Project Objectives
+
+* Analyze revenue growth across years
+* Understand customer purchasing behavior
+* Evaluate Prime vs Non-Prime customer performance
+* Identify top-performing brands and products
+* Measure festival sales impact
+* Analyze payment methods and delivery performance
+* Create an interactive dashboard for business decision-making
+
+---
+
+## Tech Stack
+
+### Programming & Analytics
+
+* Python
+* Pandas
+* NumPy
+
+### Data Visualization
+
+* Matplotlib
+* Seaborn
+* Plotly
+* Streamlit
+
+### Database
+
+* SQLite
+* SQLAlchemy
+
+### Development Environment
+
+* Jupyter Notebook
+* Anaconda
+
+---
+
+## Project Structure
+
 Amazon_India_Analytics/
-│
-├── data/
-│   ├── raw/
-│   ├── cleaned/
-│
-├── notebooks/
-│   ├── 01_data_cleaning.ipynb
-│   ├── 02_eda_analysis.ipynb
-│
-├── sql/
-│   ├── create_tables.sql
-│
+
 ├── dashboard/
-│   ├── app.py
-│
-├── database/
-│   ├── amazon_india.db
-│
+
+│ └── app.py
+
+├── notebooks/
+
+│ ├── 01_data_cleaning.ipynb
+
+│ └── 02_eda_analysis.ipynb
+
+├── sql/
+
+│ └── create_tables.sql
+
 ├── reports/
-│   ├── business_insights.md
-│
-├── requirements.txt
-└── README.md
-Data Cleaning Challenges Completed
-Challenge 1
 
-Missing Value Analysis
+│ └── business_insights.md
 
-Challenge 2
+├── outputs/
 
-Duplicate Record Detection
+│ └── screenshots/
 
-Challenge 3
+├── README.md
 
-Date Standardization
+└── requirements.txt
 
-Challenge 4
+---
 
-Payment Method Standardization
+## Data Cleaning Challenges Completed
 
-Challenge 5
+### Challenge 1 – Missing Value Analysis
 
-Boolean Field Standardization
+* Identified missing values across the dataset
+* Validated data quality
 
-Challenge 6
+### Challenge 2 – Duplicate Record Detection
 
-Customer City Cleaning
+* Checked duplicate transactions
+* Ensured data uniqueness
 
-Challenge 7
+### Challenge 3 – Date Standardization
 
-Customer State Cleaning
+* Converted order dates into datetime format
+* Extracted year, month, and quarter
 
-Challenge 8
+### Challenge 4 – Payment Method Standardization
 
-Customer Rating Validation
+* Standardized payment method names
+* Removed inconsistent formatting
 
-Challenge 9
+### Challenge 5 – Boolean Field Standardization
 
-Data Type Corrections
+* Standardized True/False values
+* Cleaned Prime membership and festival indicators
 
-Challenge 10
+### Challenge 6 – Customer City Cleaning
 
-Export Cleaned Dataset
+* Corrected city naming inconsistencies
 
-Exploratory Data Analysis
-Revenue Analytics
-Revenue Trend (2015–2025)
-Revenue Growth Analysis
-Monthly Revenue Distribution
-Revenue Heatmap
-Customer Analytics
-Prime vs Non-Prime Revenue
-Age Group Revenue Analysis
-Top Cities Analysis
-Product Analytics
-Top Brands by Revenue
-Top Products by Revenue
-Price vs Demand Analysis
-Operations Analytics
-Payment Method Distribution
-Return Status Analysis
-Delivery Days Distribution
-Festival Analytics
-Festival Sales Performance
-Key Business Insights
-Revenue Trend
+### Challenge 7 – Customer State Cleaning
 
-Revenue grew steadily from 2015 and peaked around 2020 before showing a decline in later years.
+* Standardized state values
 
-Customer Segment
+### Challenge 8 – Customer Rating Validation
 
-Prime customers generated significantly higher revenue and higher average order values.
+* Verified rating ranges and quality
 
-Geographic Performance
+### Challenge 9 – Data Type Corrections
 
-Mumbai, Delhi, Bengaluru and Chennai contributed the highest revenue.
+* Converted columns to appropriate data types
 
-Product Performance
+### Challenge 10 – Export Cleaned Dataset
 
-Samsung, Apple and OnePlus emerged as top-performing brands.
+* Generated cleaned analytical datasets
 
-Seasonal Trends
+---
 
-December generated the highest revenue, indicating strong holiday season sales.
+## Exploratory Data Analysis
 
-Festival Sales
+### Revenue Analytics
 
-Back-to-School and Diwali sales campaigns generated the highest revenues.
+* Revenue Trend Analysis (2015–2025)
+* Year-over-Year Revenue Growth
+* Monthly Revenue Distribution
+* Monthly Revenue Heatmap
+* Revenue by Category
+
+### Customer Analytics
+
+* Prime vs Non-Prime Revenue
+* Average Order Value by Membership
+* Revenue by Age Group
+* Top Cities by Revenue
+* Top States by Revenue
+* Customer RFM Analysis
+
+### Product Analytics
+
+* Top Brands by Revenue
+* Top Products by Revenue
+* Product Rating Analysis
+* Price vs Demand Analysis
+
+### Festival Analytics
+
+* Festival Sales Performance
+* Seasonal Revenue Trends
+
+### Operations Analytics
+
+* Payment Method Distribution
+* Payment Method Evolution
+* Return Status Analysis
+* Delivery Performance Analysis
+
+---
+
+## Key Business Insights
+
+### Revenue Performance
+
+* Revenue showed consistent growth from 2015 to 2020.
+* Peak revenue occurred in 2020.
+* Revenue declined after 2020, indicating market changes and increasing competition.
+
+### Customer Insights
+
+* Prime members generated significantly higher revenue than Non-Prime customers.
+* Customers aged 26–35 contributed the highest revenue.
+* Mumbai, Delhi, Bengaluru, and Chennai emerged as top-performing cities.
+
+### Product Insights
+
+* Samsung, Apple, and OnePlus were among the highest-performing brands.
+* Mid-range products generated the highest sales volume.
+* Higher-priced products experienced lower demand.
+
+### Festival Insights
+
+* Back-to-School Sale generated the highest revenue.
+* Diwali Sale and Amazon Great Indian Festival significantly boosted sales.
+* Q4 months delivered the strongest performance.
+
+### Operational Insights
+
+* UPI emerged as the most preferred payment method.
+* Most orders were delivered within 2–5 days.
+* Return rates remained relatively low.
+
+---
+
+## Dashboard Features
+
+### Executive Summary
+
+* Total Revenue
+* Total Orders
+* Total Customers
+* Average Order Value
+* Revenue by Year
+* Revenue by Category
+
+### Revenue Analytics
+
+* Monthly Revenue Trends
+* Festival Sales Analysis
+
+### Customer Analytics
+
+* Prime vs Non-Prime Revenue
+* Revenue by Age Group
+* Top Cities by Revenue
+
+### Product Analytics
+
+* Top Brands by Revenue
+* Top Products by Revenue
+
+### Operations Analytics
+
+* Payment Method Distribution
+* Return Status Analysis
+* Delivery Days Distribution
+
+---
 
 ## Dashboard Screenshots
 
@@ -157,38 +265,53 @@ Back-to-School and Diwali sales campaigns generated the highest revenues.
 
 ![Operations Analytics](outputs/screenshots/operations_analytics.png)
 
-Dashboard Features
-Executive Summary
-Total Revenue
-Total Orders
-Total Customers
-Average Order Value
-Revenue Analytics
-Revenue by Year
-Revenue by Category
-Monthly Revenue
-Customer Analytics
-Prime vs Non-Prime Revenue
-Revenue by Age Group
-Top Cities
-Product Analytics
-Top Brands
-Top Products
-Operations Analytics
-Payment Methods
-Returns
-Delivery Performance
-How to Run
+---
 
-Install dependencies:
+## Dataset
 
+The project uses Amazon India sales transaction data covering the period from 2015–2025.
+
+Due to GitHub file size limitations, the complete raw and processed datasets are not included in this repository. The analysis, notebooks, SQL scripts, dashboard code, and business insights are provided to demonstrate the full analytical workflow.
+
+---
+
+## How to Run
+
+### Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-Run dashboard:
+### Launch Dashboard
 
+```bash
 streamlit run dashboard/app.py
-Author
+```
 
-Swetha Dasari
+---
+
+## Business Value
+
+This project demonstrates:
+
+* Data Cleaning & Transformation
+* Exploratory Data Analysis
+* Business Intelligence Reporting
+* Customer Analytics
+* Product Analytics
+* Revenue Forecasting Foundations
+* Dashboard Development
+* SQL & Database Preparation
+
+---
+
+## Author
+
+**Swetha Dasari**
 
 Power BI Developer | Data Analyst | Python Developer
+
+LinkedIn: [www.linkedin.com/in/swethadasari](http://www.linkedin.com/in/swethadasari)
+
+GitHub: https://github.com/dasariswetha611-design
